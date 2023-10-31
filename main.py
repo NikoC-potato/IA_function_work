@@ -9,26 +9,40 @@ for i in range (0,5):
 for i in board:
     print(i)
 
-
-temp = ["_","_","_","_","_"]
-pair_count = 1
+pair_count = 0
 
 for i in range(0,5):
-    for j in range(0,5):
-        if board[i][j] == "x":
-            temp[j]= "x"
-        else:
-            temp[j] = "_"
-    for k in range(0, 4):
-
-        if temp[k] == temp[k + 1] and temp[k] != "_":
-
+    for j in range(0,4):
+        if board[i][j] == board[i] [j+1]:
             pair_count = pair_count + 1
-    print(temp)
+            print(board[i][j],board[i] [j+1], "pair found at ", i,j)
+            print("pairs found so far row",pair_count)
+
+
+print("========================")
+for i in range(0,4):
+    for j in range(0,5):
+        if board[i][j] == board[i+1] [j]:
+            pair_count = pair_count + 1
+            print(board[i][j],board[i+1] [j], "pair found at ", i,j)
+            print("pairs found so far row",pair_count)
 
 
 
-print(pair_count)
+
+
+
+
+
+
+
+
+
+
+
+#userinput = input("GIVE ME X and Y").split(",")
+
+
 
 
 
